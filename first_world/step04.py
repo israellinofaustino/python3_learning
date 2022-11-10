@@ -1,0 +1,18 @@
+phrase = 'Python Video Course'
+
+print(phrase.count('o'))
+print(phrase[:6:2])
+print(len(phrase.strip()))
+print(phrase.lstrip())
+print(phrase.rstrip())
+phrase = phrase.replace('Python', 'Android')
+print(phrase.find('Curso'))
+print('Curso' in phrase)
+print(phrase.split())
+print(phrase.upper())
+print(phrase.lower())
+print(phrase.capitalize())
+print(phrase.title())
+phrase = phrase.split()
+print(phrase[2][3])
+print('-'.join(phrase))
