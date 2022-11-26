@@ -18,4 +18,3 @@ elif person_years > 18:
     print(f'Você ja deveria ter se alistado há {saldo} anos')
     ano = actual - saldo
     print(f'Seu alistamento foi {ano}')
-    
