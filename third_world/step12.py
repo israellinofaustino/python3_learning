@@ -3,6 +3,9 @@ list_num = []
 fruit_list = ["blackberry", "melon", "melon", "pear"]
 clear_list = ["Male", "Female", "Age", "DTB", "location", "Email", "Phone"]
 
+for i in range(len(fruit_list)):
+    print(fruit_list[i])
+
 clear_list.clear()
 print(clear_list)
 
