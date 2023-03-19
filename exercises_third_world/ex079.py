@@ -5,7 +5,7 @@ while True:
     if user_num not in list_numbers:
         list_numbers.append(user_num)
     else:
-        print('Valor duplicado... Não vou adicionar.')
+        print('Duplicate value... I will not add.')
 
     contin = input('Do you want continue? [Y/N] => ').upper().strip()[0]
     if contin == 'N':

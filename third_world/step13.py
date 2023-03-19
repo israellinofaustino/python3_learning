@@ -15,7 +15,7 @@ print(guys[0][1])
 print(guys[1][0])
 
 people = [["Israel Lino Faustino", 25], ["Samara Delean Costa Fraga", 26],
-          ["Alex Lima", 27], ["Maria da Silva", 28], ["João Pedro da Silva", 29]]
+          ["Alex Lima", 27], ["Maria da Silva", 28], ["João Pedro", 29]]
 
 print(people[0])
 print(people[0][0])

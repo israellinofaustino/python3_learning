@@ -1,4 +1,4 @@
-produtos = ('Lapis', 1.75,
+products = ('Lapis', 1.75,
             'Borracha', 2.10,
             'Caderno', 25.60,
             'Estojo', 5.90,
@@ -12,9 +12,9 @@ print('-=' * 20)
 print(f'{"PRICE LIST":^40}')
 print('-=' * 20)
 
-for pos in range(0, len(produtos)):
+for pos in range(0, len(products)):
     if pos % 2 == 0:
-        print(f'{produtos[pos]:.<30}', end='')
+        print(f'{products[pos]:.<30}', end='')
     else:
-        print(f'R${produtos[pos]:>7.2f}')
+        print(f'R${products[pos]:>7.2f}')
 print('-=' * 20)
