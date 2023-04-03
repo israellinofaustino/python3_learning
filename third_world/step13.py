@@ -42,14 +42,14 @@ for p in people:
     print(f"{p[0]} is {p[1]} years old.")
 print("-=" * 22)
 
+temp = []
 ppl = []
-data = []
 
 for c in range(0, 3):
-    data.append(input("Name: "))
-    data.append(int(input("Age: ")))
-    ppl.append(data[:])
-    data.clear()
+    temp.append(input("Name: "))
+    temp.append(int(input("Age: ")))
+    ppl.append(temp[:])
+    temp.clear()
 print(ppl)
 
 totyoung = totolder = 0
