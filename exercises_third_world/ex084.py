@@ -25,7 +25,7 @@ print(f"Altogether you have registered {len(people)} people.")
 
 print("-=" * 25)
 
-print(f"The highest weight was{max_weight}Kg. weight of ", end='')
+print(f"The highest weight was {max_weight}Kg. weight of ", end='')
 for person in people:
     if person[1] == max_weight:
         print(f"[{person[0]}] ", end='')
