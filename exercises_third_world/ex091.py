@@ -2,8 +2,11 @@ from random import randint
 from operator import itemgetter
 from time import sleep
 
-gamers = {'gamer1': randint(1, 6), 'gamer2': randint(1, 6),
-        'gamer3': randint(1, 6), 'gamer4': randint(1, 6)}
+gamers = {'gamer1': randint(1, 6),
+          'gamer2': randint(1, 6),
+          'gamer3': randint(1, 6),
+          'gamer4': randint(1, 6)
+          }
 
 ranking = list()
 print("-=-=-=-= Dice Game -=-=-=-=")
