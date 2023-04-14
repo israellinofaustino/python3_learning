@@ -1,4 +1,9 @@
-people = {'name': 'Israel', 'age': '25', 'gener': 'M', 'phone': 7756510694, 'email': 'israel@gmail.com'}
+people = {'name': 'Israel',
+          'age': '25',
+          'gener': 'M',
+          'phone': 7756510694,
+          'email': 'israel@gmail.com'
+          }
 
 people['name'] = 'Israel Lino'
 people['weight'] = 105.8
@@ -14,7 +19,7 @@ print('-=' * 40)
 print(f"{people['name']} is {people['age']} years old and his phone number is => {people['phone']}")
 print('-=' * 40)
 
-for k in people.keys():  #.values() or .itens()
+for k in people.keys():  # .values() or .itens()
     print(k)
 
 print('-=' * 20)
