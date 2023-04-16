@@ -10,13 +10,13 @@ print('-'*20)
 quant = int(input("How many games do you want to draw? => "))
 total = 1
 while total <= quant:
-    cont = 0
+    count = 0
     while True:
         num = randint(1, 60)
         if num not in list_:
             list_.append(num)
-            cont += 1
-        if cont >= 6:
+            count += 1
+        if count >= 6:
             break
     list_.sort()
     games.append(list_[:])
