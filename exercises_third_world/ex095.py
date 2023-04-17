@@ -22,20 +22,28 @@ while True:
 
 
 print('-=' * 30)
-print(f"{'cod':<4} {'name':<8} {'goals'} {'total goals':>38}")
+print('cod ', end='')
+for i in player.keys():
+    print(f'{i:<15}', end='')
+print()
 print('-' * 60)
-for i in enumerate(players):
-    print(f"{i[0]:<4} {i[1]['name']:<8} {i[1]['goals']} {i[1]['total_goals']:>25}")
-
+for k, v in enumerate(players):
+    print(f"{k:>3} ", end='')
+    for d in v.values():
+        print(f"{str(d):<15}", end='')
+    print()
 print('-=' * 30)
 
 while True:
     quest = int(input("Show data of which player? (999 to end) => "))
     if quest == 999:
         break
-    print('-=' * 20)
-    print(f" -- PLAYER SURVEY {players[quest]['name']}")
-    print('-=' * 20)
-    for position, goals in enumerate(players[quest]['goals']):
-        print(f"     In game {position + 1} scored {goals} goals.")
-    print('-=' * 20)
+    if quest >= len(players):
+        print(f"ERROR! There is no player with code {quest}.")
+    else:
+        print('-=' * 20)
+        print(f" -- PLAYER SURVEY {players[quest]['name']}")
+        print('-=' * 20)
+        for position, goals in enumerate(players[quest]['goals']):
+            print(f"     In game {position + 1} scored {goals} goals.")
+        print('-=' * 20)
