@@ -30,12 +30,12 @@ for i in enumerate(players):
 print('-=' * 30)
 
 while True:
-    quest = int(input("Mostrar dados de qual jogador? (999 to end) => "))
+    quest = int(input("Show data of which player? (999 to end) => "))
     if quest == 999:
         break
     print('-=' * 20)
-    print(f" -- LEVANTAMENTO DO JOGADOR {players[quest]['name']}")
+    print(f" -- PLAYER SURVEY {players[quest]['name']}")
     print('-=' * 20)
     for position, goals in enumerate(players[quest]['goals']):
-        print(f"     No jogo {position + 1} fez {goals} goals.")
+        print(f"     In game {position + 1} scored {goals} goals.")
     print('-=' * 20)
