@@ -1,4 +1,4 @@
-# python3_learning :snake:
+# Python3 :snake:
 
 ## In this repository, I will store all my learnings, advances and tests that I do in python, from simple things like a looping structure to the more complex features of python that I haven't explored yet.
 
