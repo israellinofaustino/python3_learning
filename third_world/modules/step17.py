@@ -1,6 +1,7 @@
 from modules import calculus
 
 
+
 num = int(input("Write a number: "))
 fact = calculus.factorial(num)
 print(f"The factorial of {num} is {fact}")

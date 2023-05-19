@@ -11,3 +11,22 @@ def double(n):
 
 def triple(n):
     return n * 3
+
+
+def divdouble(n):
+    return n / 2
+
+
+def increase_value(price, tax):
+    answer = price + (price * tax / 100)
+    return answer
+
+
+def decrease_value(price, tax):
+    answer = price - (price * tax / 100)
+    return answer
+
+
+def line():
+    print("-=" * 20)
+
