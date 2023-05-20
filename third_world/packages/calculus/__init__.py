@@ -2,7 +2,7 @@ def line():
     """
     -> Creates a separator line used in the terminal (CMD).
     """
-    print("-=" * 20)
+    print("-" * 35)
 
 
 def factorial(n = 1):
@@ -83,4 +83,16 @@ def format_currency(price=0, currency='£'):
     """
     answer = f"{currency}{price:.2f}".replace('.', ',')
     return answer
+
+
+def resume(price=0, taxupper=10, taxlower=5):
+    line()
+    print("AMOUNT SUMMARY".center(35))
+    line()
+    print(f"Price analyzed => \t{format_currency(price)}")
+    print(f"Double the price => \t{double(price, True)}")
+    print(f"Half-price => \t\t{divdouble(price, True)}")
+    print(f"{taxupper}% raise => \t\t{increase_value(price, taxupper, True)}")
+    print(f"{taxlower}% off => \t\t{decrease_value(price, taxlower, True)}")
+    line()
 
