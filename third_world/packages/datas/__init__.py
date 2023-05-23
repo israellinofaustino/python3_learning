@@ -9,17 +9,29 @@ def read_money(msg):
             return float(enter)
 
 
-def valid_n(msg):
-    ok = False
-    value = 0
+def valid_int_number(msg):
     while True:
-        n = str(input(msg))
-        if n.isnumeric():
-            value = int(n)
-            ok = True
+        try:
+            n = int(input(msg))
+        except (ValueError, TypeError):
+            print("\033[0;31mError, please enter a valid INTEGER number.\033[m")
+            continue
+        except (KeyboardInterrupt):
+            print("\n\033[0;31mUser interrupted data entry.\033[m")
+            return 0
         else:
-            print("\033[0;31mError, please enter a valid integer.\033[m")
-        if ok:
-            break
-    return value
+            return n
 
+
+def valid_float_number(msg):
+    while True:
+        try:
+            n = float(input(msg))
+        except (ValueError, TypeError):
+            print("\033[0;31mError, please enter a valid FLOAT/REAL number.\033[m")
+            continue
+        except (KeyboardInterrupt):
+            print("\n\033[0;31mUser interrupted data entry.\033[m")
+            return 0
+        else:
+            return n
