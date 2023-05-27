@@ -1,3 +1,6 @@
+import os
+
+
 def read_money(msg):
     valid = False
     while not valid:
@@ -14,11 +17,11 @@ def valid_int_number(msg):
         try:
             n = int(input(msg))
         except (ValueError, TypeError):
-            print("\033[0;31mError, please enter a valid INTEGER number.\033[m")
+            print("\033[0;31mError, please write a valid number.\033[m")
             continue
         except (KeyboardInterrupt):
             print("\n\033[0;31mUser interrupted data entry.\033[m")
-            return 0
+            return 3
         else:
             return n
 
@@ -35,3 +38,19 @@ def valid_float_number(msg):
             return 0
         else:
             return n
+
+
+def line(object):
+    print("-" * object)
+
+
+def verify_file_exist():
+    path = 'D:/src/learning-python/fundamentals/CursoEmVideo/third_world/packages/people.txt'
+    isFile = os.path.isfile(path)
+
+    if isFile == False:
+        f = open("people.txt", "a")
+        f.write("----------------------USERS----------------------")
+        f.close()
+        return f
+
