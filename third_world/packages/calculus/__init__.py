@@ -87,7 +87,7 @@ def format_currency(price=0, currency='£'):
 
 def resume(price=0, taxupper=10, taxlower=5):
     line()
-    print("AMOUNT SUMMARY".center(35))
+    print("AMOUNT SUMMARY"(35))
     line()
     print(f"Price analyzed => \t{format_currency(price)}")
     print(f"Double the price => \t{double(price, True)}")
