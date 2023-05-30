@@ -1,5 +1,5 @@
 import os
-
+from time import sleep
 
 def read_money(msg):
     valid = False
@@ -51,21 +51,20 @@ def verify_file_exist():
 
     if isFile == False:
         f = open("people.txt", "a")
-        f.write("-----------------------USERS----------------------")
         f.close()
         return f
 
 
-def menu(text):
-    line()
-    print(text.center(30))
-    line()
+def menu(text, quant1 = 30, quant2 = 30, center_mine = 30):
+    line(quant1)
+    print(text.center(center_mine))
+    line(quant2)
 
 
 def options(opt1 = "", opt2 = "", opt3 = ""):
     dict_ = {"1":opt1, "2":opt2, "3":opt3}
     for i, v in dict_.items():
-        print(f"{i} - {v}")
+        print(f"\033[0;32m{i} - {v}\033[m")
     line()
 
 
@@ -76,7 +75,8 @@ def show_users():
     for i in users:
         name = i.split(";")[0]
         age = i.split(";")[1]
-        print(f"{name:<25}  {age} years old.")
+        print(f"\033[0;35m{name:<25}  {age} years old.\033[m")
+        sleep(0.5)
     line(40)
 
 
@@ -84,8 +84,12 @@ def register_user():
     line(45)
     name = str(input("Whats your name? ").strip())
     age = valid_int_number("How old are you? ")
-    file = open("people.txt", "a")
-    # file.write(f"{name};")
-    file.writable(f"{name};{str(age)};")
-    file.close
+    try:
+        file = open("people.txt", "a")
+        file.write(f"\n{name};{str(age)};".lstrip())
+        file.close()
+    except:
+        print("Something wrong happend.")
+    else:
+        menu(f"'{name}' successfully registered.", quant1=45, quant2=45)
 
