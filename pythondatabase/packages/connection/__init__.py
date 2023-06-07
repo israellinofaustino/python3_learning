@@ -1,5 +1,5 @@
 import mysql.connector
-
+from packages import string, numbers
 
 mydatabase = mysql.connector.connect(
     host='localhost',
@@ -25,9 +25,29 @@ def show_data(table_name):
         print(i)
 
 
-def insert_data(list_data):
-    mycursor = mydatabase.cursor() 
-    sqlinsert = "INSERT INTO person (name, surname, email, address, date_time) VALUES (%s, %s, %s, %s, NOW())"
-    mycursor.executemany(sqlinsert, list_data)
-    committ()
+def register_user():
+    list_of_person = list()
+    string.line(45)
+    name = str(input("Write your name: ")).strip()
+    surname = str(input("Write your surname: ")).strip()
+    email = str(input("Write your email: ")).strip()
+    address = str(input("Write yout address: ")).strip()
+    list_of_person.append(tuple([name, surname, email, address]))
+    try:
+        mycursor = mydatabase.cursor() 
+        sqlinsert = "INSERT INTO person (name, surname, email, address, date_time) VALUES (%s, %s, %s, %s, NOW())"
+        mycursor.executemany(sqlinsert, list_of_person)
+        committ()
+    except:
+        print("Something wrong happend.")
+    else:
+        string.title("Successfully registered.", quant1=45, quant2=45, center_mine=45)
+
+
+def edit_user():
+    print('LOADING...')
+
+
+def delete_user():
+    print('LOADING...')
 

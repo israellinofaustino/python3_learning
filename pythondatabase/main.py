@@ -1,21 +1,21 @@
-from packages import connection
+from packages import connection, string, numbers
 
 
-list_of_person = []
+string.title('MENU OPTIONS')
+string.options('SHOW USERS', 'REGISTER A NEW USER', 'EDIT A USER', 'DELETE A USER', 'EXIT')
+
+
 while True:
-    question = str(input("Do you want add someone? [Yes/No] => ")).strip().upper()[0]
-    if question == 'N':
+    your_option = numbers.valid_int_number("\033[0;33mYour choice [options 1, 2, 3, 4 or 5] => \033[m")
+    if your_option == 1:
         connection.show_data('people.person')
+    elif your_option == 2:
+        connection.register_user()
+    elif your_option == 3:
+        connection.edit_user()
+    elif your_option == 4:
+        connection.delete_user()
+    elif your_option == 5:
+        string.title("\033[0;31mLogout of the system, bye.\033[m", quant1=40, quant2=40, center_mine=47)
         break
-    name = str(input("Write your name: ")).strip()
-    surname = str(input("Write your surname: ")).strip()
-    email = str(input("Write your email: ")).strip()
-    address = str(input("Write yout address: ")).strip()
-    end = str(input("Do you want continue? [Yes/No]: ")).strip().upper()[0]
-    list_of_person.append(tuple([name, surname, email, address]))
-    if end == 'N':
-        break
-    else:
-        continue
 
-connection.insert_data(list_of_person)
