@@ -7,6 +7,6 @@ def valid_int_number(msg):
             continue
         except (KeyboardInterrupt):
             print("\n\033[0;31mUser interrupted data entry.\033[m")
-            return 3
+            return 000
         else:
             return n

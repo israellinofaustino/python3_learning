@@ -6,7 +6,7 @@ string.options('SHOW USERS', 'REGISTER A NEW USER', 'EDIT A USER', 'DELETE A USE
 
 
 while True:
-    your_option = numbers.valid_int_number("\033[0;33mYour choice [options 1, 2, 3, 4 or 5] => \033[m")
+    your_option = numbers.valid_int_number("\033[0;33mYour choice [options 1, 2, 3, 4 or 000] => \033[m")
     if your_option == 1:
         connection.show_data('people.person')
     elif your_option == 2:
@@ -15,7 +15,7 @@ while True:
         connection.edit_user()
     elif your_option == 4:
         connection.delete_user()
-    elif your_option == 5:
+    elif your_option == 000:
         string.title("\033[0;31mLogout of the system, bye.\033[m", quant1=40, quant2=40, center_mine=47)
         break
 
