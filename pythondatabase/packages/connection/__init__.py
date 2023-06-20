@@ -1,5 +1,6 @@
 import mysql.connector
 from time import sleep
+import datetime
 from packages import string, numbers
 
 mydatabase = mysql.connector.connect(
@@ -22,8 +23,13 @@ def show_data(table_name):
     mycursor = mydatabase.cursor() 
     mycursor.execute(f"SELECT * FROM {table_name}")
     result = mycursor.fetchall()
+    string.line(130)
+    string.columns(f'{"ID":<5}', f'{"Name":<15}', f'{"Surname":<25}', f'{"Email":<25}', f'{"Address":<25}', f'{"Registration Date":<25}')
+    string.line(130)
     for i in result:
-        print(i)
+        registration_date = i[5]
+        print(f"{i[0]:<5} {i[1]:<15} {i[2]:<25} {i[3]:<25} {i[4]:<25}", registration_date.strftime('%Y %b %d, %I:%M%p'))
+    string.line(130)
 
 
 def show_specify(id):

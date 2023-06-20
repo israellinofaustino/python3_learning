@@ -15,3 +15,8 @@ def options(opt1 = "", opt2 = "", opt3 = "", opt4 = "", opt5 = ""):
     line()
 
 
+def columns(*names_of_columns):
+    for i in names_of_columns:
+        print(f"\033[0;36m{i}\033[m", end=" ")
+    print()
+
